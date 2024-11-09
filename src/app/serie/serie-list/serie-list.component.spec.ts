@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing'; // Reemplaza 'async' por 'waitForAsync'
 
 import { SerieListComponent } from './serie-list.component';
 
@@ -7,7 +7,7 @@ describe('SerieListComponent', () => {
   let component: SerieListComponent;
   let fixture: ComponentFixture<SerieListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => { // Reemplaza el uso de 'async' por 'waitForAsync'
     TestBed.configureTestingModule({
       declarations: [ SerieListComponent ]
     })
