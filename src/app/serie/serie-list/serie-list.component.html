@@ -1,34 +1,36 @@
-<div class="container mt-3">
-  <div class="row">
-      <div class="col-6 mx-auto">
-          <table class="table table-light" id="tabla-datos">
-              <thead class="table-light" style="background-color: white; color: black;">
-                  <tr>
-                      <th>#</th>
-                      <th>Name</th>
-                      <th>Channel</th>
-                      <th>Seasons</th>
-                  </tr>
-              </thead>
-              <tbody id="series">
-                <tr *ngFor="let c of series" style="background-color: lightgrey;">
-                    <th>
-                      <dd class="tabla-datos">{{c.id}}</dd>
-                    </th>
-                    <td class="text-primary">
-                      <dd>{{c.name}}</dd>
-                    </td>
-                    <td>
-                      <dd>{{c.channel}}</dd>
-                    </td>
-                    <td>
-                        <dd>{{c.seasons}}</dd>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-
-          <p id="average">Promedio de temporadas: {{promedio}}</p>
-      </div>
-
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-5">
+      <table class="table table-light" id="series-table">
+          <thead>
+              <tr>
+                  <th scope="col" id="white-cell">#</th>
+                  <th scope="col" id="white-cell">Name</th>
+                  <th scope="col" id="white-cell">Channel</th>
+                  <th scope="col" id="white-cell">Seasons</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let serie of series">
+              <th scope="row">
+                <dd>{{serie.id}}</dd>
+              </th>
+              <td>
+                <dd><a href="{{serie.webpage}}" target="_blank"><strong>{{serie.name}}</strong></a></dd>
+              </td>
+              <td>
+                <dd>{{serie.channel}}</dd>
+              </td>
+              <td>
+                <dd>{{serie.seasons}}</dd>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" id="white-cell" colspan="12">
+                <dd>Seasons average: {{seasonsAvg}}</dd>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+  </div>
 </div>

@@ -1,7 +1,6 @@
 /* tslint:disable:no-unused-variable */
-import { HttpClientTestingModule } from '@angular/common/http/testing'; // Agregar esta importación
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { SerieService } from '../serie.service'; // Importar el servicio si es necesario
+
 import { SerieListComponent } from './serie-list.component';
 
 describe('SerieListComponent', () => {
@@ -10,9 +9,7 @@ describe('SerieListComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule], // Agregar HttpClientTestingModule aquí
-      declarations: [SerieListComponent],
-      providers: [SerieService] // Asegúrate de proveer el servicio si es necesario
+      declarations: [ SerieListComponent ]
     })
     .compileComponents();
   }));
