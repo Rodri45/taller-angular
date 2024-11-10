@@ -9,7 +9,7 @@ import { Serie } from '../serie';
 })
 export class SerieService {
 
-  private dataUrl: string = environment.seriesDataUrl;
+  private dataUrl: string = environment.baseurl;
   
   constructor(private http: HttpClient) { }
 
